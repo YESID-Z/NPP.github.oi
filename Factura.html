@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/NEWS-PHONE-PAGE.jpg" type="image/x-icon" >
+    <title>FACTURA DE VENTAS - PEDIDO</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/facturas.css">
+</head>
+
+
+
+
+<body>
+    <center>
+        <a href="./index.html"><img src="./assets/img/NEWS-PHONE-PAGE.jpg" alt="" width="300" height="300"></a>
+        <h1>FACTURA DE VENTAS - VENTAS</h1>
+        <!-- seccion de formulario -->
+         <form action="" method="post">
+            <table><caption>PEDIDOS</caption>
+                <tr>
+                    <th>NOMBRE DEL CLIENTE</th><td>
+                    <input type="text" size="20"></td><th>TIPO DOCUMENTO</th>
+                    <th>
+                        <select name="tipodoc" id="tp">
+                            <option value="CC">CC</option>
+                            <option value="CE">CE</option>
+                            <option value="NIT">NIT</option>
+                        </select>
+                    </th>
+                    <th>No. Documento
+                        <td>
+                        <input type="text" name="ndoc" id="" size="25">
+                        </td>
+                    </th>
+                </tr>
+                
+                <tr>
+                    <th>DIRECCION</th><td><input type="text" name="dir" id="" size="20"></td>
+                    <th>TELEFONO</th><td><input type="text" name="dtel" id="" size="20"></td>
+                    <th>VENDEDOR</th><td><input type="text" name="vend" id="" size="20"></td>
+                </tr>
+
+                <tr>
+                    <th>REFERENCIA</th>
+                    <th colspan="2">DESCRIPCION</th>
+                    <th>CANTIDAD</th>
+                    <th>VALOR UNITARIO</th>
+                    <th>SUBTOTAL</th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <select name="" id="prod1" onchange="mostrar()">
+                            <option>Seleccionar</option>
+                            <option value="25000">128GB ROM 8GB RAM</option>
+                            <option value="20000">258GB ROM 12GB RAM</option>
+                            <option value="35000">1TB ROM 16GB RAM</option>
+                        </select>
+                    </th>
+                    <th colspan="2"><input type="text" name="" id="desc01" size="40"></th>
+                    <th><input type="number" name="" id="cant01" size="10"></th>
+                    <th><input type="number" name="" id="vau01" size="15" disabled></th>
+                    <th><input type="text" name="" id="vat01" size="15" disabled></th>
+                </tr>
+            
+                <tr>
+                    <th colspan="6">PRODUCTOS</th>
+                </tr>
+
+                <tr>
+                    <th colspan="2" rowspan="2"><img src="https://www.exclusivejj.com/tienda/4737-large_default/nothing-phone-2-12gb512gb.jpg" alt=""><input type="checkbox" name="adic" id="checkbox2"></th></img></th>
+                    <th colspan="2" rowspan="2"><img src="https://mx.nothing.tech/cdn/shop/files/Arc_Glyphs_Cover.jpg?v=1740665973&width=1500" alt=""><input type="checkbox" name="adic" id="checkbox2"></th></img></th>
+                    <th colspan="2" rowspan="2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQzwRGM2diydJ3QhuqgZems05VDh6QeTzEdw&s" alt=""><input type="checkbox" name="adic" id="checkbox2"></th></img></th>
+                </tr>
+
+
+
+                <tr></tr>
+                <tr>
+                    <th colspan="4">TOTAL ADICIONALES</th>
+                    <th colspan="2"><input type="text" name="" id="adic0"></th>
+                </tr>
+
+
+                <tr>
+                    <th colspan="2">FORMA DE PAGO</th>
+                    <th>
+                        <input type="radio" name="fp" id="radio1">efectivo <br>
+                        <input type="radio" name="fp" id="radio2">nequi <br>
+                        <input type="radio" name="fp" id="radio3">tarjetas <br>
+                    </th>
+                    <th>SUBTOTAL</th><td><input type="text" name="" id="subt" siza="25" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2" rowspan="3">OBSERVACIONES: Revise su pedido al entregarlo y ¡GRASIAS POR SU COMPRA!</th>
+                    <th>IVA</th><td><input type="text" name="" id="iva" siza="25" disabled></td>
+                </tr>
+                
+                <tr>
+                    <th>DESCUENTO</th>
+                    <td><input type="text" name="" id="desc" size="25" disabled></td>
+                </tr>    
+
+                <tr>
+                    <th>NETO</th>
+                    <td><input type="text" name="" id="neto" size="25" disabled></td>
+                </tr>
+
+                <tr>
+                    <th colspan="2"><input type="button" value="CALCULAR PAGO" onclick="mostrar()"></th>
+                    <th colspan="2"><input type="reset" value="BORRAR"></th>
+                    <th colspan="2"><input type="button" value="ENVIAR" onclick="enviar()"></th>
+                </tr>
+
+            
+            </table>
+         </form>
+    </center>
+    <script src="./assets/js/Factura.js"></script>
+</body>
+</html>

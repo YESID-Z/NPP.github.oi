@@ -1,0 +1,281 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #19191a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.servicios-header {
+  text-align: center;
+  margin: 32px 0 16px 0;
+}
+
+.servicios-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.servicios-logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.12);
+}
+
+.servicios-logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.servicios-titulo {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin: 8px 0 0 0;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.servicios-subtitulo {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 8px 0 24px 0;
+  font-weight: 500;
+}
+
+.servicios-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin: 32px 0;
+}
+
+.flip-box-full {
+  background: transparent;
+  color: rgb(36, 36, 36);
+  display: flex;
+  width: 300px;
+  height: 380px;
+  perspective: 1000px;
+  cursor: pointer;
+  left: 200px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(.4,2.08,.55,.44);
+  transform-style: preserve-3d;
+}
+
+.flip-box-full.flipped .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 18px;
+}
+
+.flip-box-front {
+  background: linear-gradient(135deg, #000000 60%, #ffffff 100%);
+  color: #3b3b3b;
+}
+
+.flip-box-back {
+  background: linear-gradient(135deg, #222 60%, #444 100%);
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.flip-box-img img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  margin: 0px;
+  margin-bottom: 18px;
+  background: #fff;
+  padding: 8px;
+}
+
+.flip-box-text h2 {
+  margin: 8px 0 6px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.flip-box-text p {
+  font-size: 1rem;
+  color: #f1f1f1;
+}
+
+@media (max-width: 1000px) {
+  .servicios-row {
+    gap: 16px;
+  }
+  .flip-box-full {
+    width: 260px;
+    height: 340px;
+  }
+}
+
+@media (max-width: 800px) {
+  .servicios-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flip-box-full {
+    width: 90%;
+    max-width: 350px;
+    height: 340px;
+  }
+}
+
+/* ...existing code... */
+
+/* Footer general */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 0 20px 0;
+  font-size: 1rem;
+}
+
+.footer .footer-top {
+  padding-bottom: 20px;
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  background: rgba(255,255,255,0.01);
+  border-radius: 12px;
+  padding: 18px 12px;
+  min-width: 180px;
+  flex: 1 1 0;
+  margin-bottom: 0;
+}
+
+.footer-about .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-about .sitename {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.footer .social-links a {
+  font-size: 1.3rem;
+  margin-right: 15px;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.footer .social-links a:hover {
+  color: #ffffff;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-contact p,
+.footer-contact span {
+  color: #bbb;
+  margin-bottom: 4px;
+  font-size: 0.98rem;
+}
+
+.footer-contact strong {
+  color: #fff;
+}
+
+.copyright {
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+.credits a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 991px) {
+  .footer .row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    min-width: 0;
+    margin-bottom: 24px;
+  }
+  .footer-contact {
+    text-align: left;
+  }
+}
+
+/* ...existing code... */
